@@ -1,0 +1,13 @@
+# Summary of contributions
+
+{{.Name}}
+
+from {{.Begin}} to {{.End}}
+
+{{range $setKey, $ctrbSet := .ContributionSet}}
+## {{ $setKey }}
+{{range $key, $ctrb := $ctrbSet.ContributionMap}}
+[{{$ctrb.Subject}}]($ctrb.URL)
+Create:{{$ctrb.Create}}, Update:{{$ctrb.Update}}, Delete:{{$ctrb.Delete}}, Action:{{$ctrb.Action}}, ★:{{$ctrb.Stared}}
+{{end}}
+{{end}}
